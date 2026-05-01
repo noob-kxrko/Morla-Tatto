@@ -11,20 +11,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
 
         :root {
-            --bg-0: #07070c;
-            --bg-1: #0b0b14;
-            --glass: rgba(255, 255, 255, 0.06);
-            --glass-strong: rgba(255, 255, 255, 0.10);
-            --stroke: rgba(255, 255, 255, 0.10);
-            --stroke-gold: rgba(212, 175, 55, 0.35);
-            --text: #e9e9f4;
-            --muted: rgba(233, 233, 244, 0.72);
-            --gold: #d4af37;
-            --gold-2: #f4e4bc;
-            --violet: #7c3aed;
-            --violet-2: #a78bfa;
-            --shadow: 0 30px 80px rgba(0, 0, 0, 0.60);
-            --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+            --bg-0: #000000;
+            --bg-1: #1a0000;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-strong: rgba(255, 255, 255, 0.08);
+            --stroke: rgba(255, 255, 255, 0.1);
+            --stroke-red: rgba(220, 20, 60, 0.4);
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.7);
+            --red: #dc143c;
+            --red-2: #ff0000;
+            --red-3: #8b0000;
+            --shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+            --shadow-soft: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
         
         * {
@@ -36,12 +35,13 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background:
-                radial-gradient(1200px 500px at 20% 10%, rgba(124, 58, 237, 0.30) 0%, transparent 60%),
-                radial-gradient(900px 500px at 80% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 62%),
-                radial-gradient(800px 500px at 80% 90%, rgba(167, 139, 250, 0.18) 0%, transparent 58%),
-                linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+                radial-gradient(1400px 600px at 25% 15%, rgba(220, 20, 60, 0.15) 0%, transparent 55%),
+                radial-gradient(1000px 600px at 75% 5%, rgba(139, 0, 0, 0.20) 0%, transparent 58%),
+                radial-gradient(900px 600px at 75% 95%, rgba(255, 0, 0, 0.10) 0%, transparent 55%),
+                linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 100%);
             color: var(--text);
             line-height: 1.6;
+            min-height: 100vh;
         }
         
         .logo-title {
@@ -52,9 +52,9 @@
         
         .hero-bg {
             background:
-                radial-gradient(900px 280px at 30% 0%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
-                radial-gradient(800px 260px at 80% 10%, rgba(124, 58, 237, 0.22) 0%, transparent 70%),
-                linear-gradient(135deg, rgba(10, 10, 15, 0.96) 0%, rgba(15, 15, 25, 0.96) 55%, rgba(8, 8, 15, 0.96) 100%);
+                radial-gradient(1000px 320px at 35% 0%, rgba(220, 20, 60, 0.08) 0%, transparent 60%),
+                radial-gradient(900px 300px at 75% 15%, rgba(139, 0, 0, 0.12) 0%, transparent 65%),
+                linear-gradient(145deg, rgba(0, 0, 0, 0.98) 0%, rgba(26, 0, 0, 0.98) 50%, rgba(0, 0, 0, 0.98) 100%);
             position: relative;
         }
         
@@ -66,9 +66,9 @@
             right: 0;
             bottom: 0;
             background:
-                radial-gradient(900px 300px at 20% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 65%),
-                radial-gradient(900px 300px at 80% 30%, rgba(124, 58, 237, 0.16) 0%, transparent 70%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="%23151523" stroke-width="0.6"/></pattern></defs><rect width="120" height="120" fill="url(%23grid)"/></svg>');
+                radial-gradient(900px 300px at 20% 20%, rgba(220, 20, 60, 0.08) 0%, transparent 65%),
+                radial-gradient(900px 300px at 80% 30%, rgba(139, 0, 0, 0.10) 0%, transparent 70%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M 12 0 L 0 0 0 12" fill="none" stroke="%23111111" stroke-width="0.6"/></pattern></defs><rect width="120" height="120" fill="url(%23grid)"/></svg>');
             opacity: 0.22;
             pointer-events: none;
         }
@@ -80,24 +80,26 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--violet) 0%, var(--gold) 55%, var(--gold-2) 100%);
-            color: #0a0a0a;
-            padding: 14px 32px;
-            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-3) 0%, var(--red) 50%, var(--red-2) 100%);
+            color: #ffffff;
+            padding: 16px 36px;
+            border-radius: 50px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            letter-spacing: 1.2px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
             text-decoration: none;
             border: none;
             cursor: pointer;
-            box-shadow: 0 18px 45px rgba(124, 58, 237, 0.25), 0 10px 30px rgba(212, 175, 55, 0.18);
+            box-shadow: 0 20px 40px rgba(220, 20, 60, 0.3), 0 8px 25px rgba(139, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 22px 55px rgba(124, 58, 237, 0.30), 0 12px 35px rgba(212, 175, 55, 0.22);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(220, 20, 60, 0.4), 0 12px 35px rgba(139, 0, 0, 0.25);
         }
         
         .btn-secondary {
@@ -118,51 +120,53 @@
         }
         
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.16);
-            border-color: var(--stroke-gold);
-            color: var(--gold-2);
+            background: rgba(220, 20, 60, 0.16);
+            border-color: var(--stroke-red);
+            color: var(--red-2);
             transform: translateY(-2px);
         }
         
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--gold-2);
+            margin-bottom: 3.5rem;
+            color: var(--red-2);
             position: relative;
-            text-shadow: 0 14px 45px rgba(212, 175, 55, 0.14), 0 14px 45px rgba(124, 58, 237, 0.10);
+            text-shadow: 0 16px 50px rgba(220, 20, 60, 0.15), 0 16px 50px rgba(139, 0, 0, 0.12);
+            letter-spacing: 1px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px;
+            bottom: -18px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent 0%, var(--gold) 45%, var(--violet-2) 100%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--red-3) 40%, var(--red-2) 100%);
+            border-radius: 2px;
         }
         
         .tattoo-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.03) 100%);
-            border-radius: 16px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border-radius: 20px;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             box-shadow: var(--shadow-soft);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
         }
         
         .tattoo-card:hover {
-            transform: translateY(-10px) rotateX(2deg);
+            transform: translateY(-12px) rotateX(3deg) scale(1.02);
             box-shadow: var(--shadow);
-            border-color: rgba(212, 175, 55, 0.35);
+            border-color: rgba(220, 20, 60, 0.4);
         }
         
         .tattoo-card::before {
@@ -172,10 +176,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(700px 260px at 15% 0%, rgba(212, 175, 55, 0.18) 0%, transparent 60%),
-                        radial-gradient(650px 240px at 85% 25%, rgba(124, 58, 237, 0.18) 0%, transparent 65%);
+            background: radial-gradient(800px 280px at 20% 0%, rgba(220, 20, 60, 0.15) 0%, transparent 55%),
+                        radial-gradient(750px 260px at 80% 30%, rgba(139, 0, 0, 0.15) 0%, transparent 60%);
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
         
         .tattoo-card:hover::before {
@@ -184,48 +188,51 @@
         
         .gallery-img {
             width: 100%;
-            height: 320px;
+            height: 340px;
             object-fit: cover;
-            transition: transform 0.4s ease;
-            filter: contrast(1.06) brightness(1.04) saturate(1.12);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: contrast(1.08) brightness(1.06) saturate(1.15);
             image-rendering: -webkit-optimize-contrast;
             image-rendering: auto;
         }
         
         .tattoo-card:hover .gallery-img {
-            transform: scale(1.05);
-            filter: contrast(1.08) brightness(1.05) saturate(1.15);
+            transform: scale(1.08);
+            filter: contrast(1.12) brightness(1.08) saturate(1.2);
         }
         
         .social-placeholder {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.05);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             cursor: pointer;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
         }
         
         .social-placeholder:hover {
-            background: rgba(212, 175, 55, 0.16);
-            border-color: rgba(212, 175, 55, 0.35);
-            transform: scale(1.12);
+            background: linear-gradient(135deg, rgba(220, 20, 60, 0.2) 0%, rgba(220, 20, 60, 0.1) 100%);
+            border-color: rgba(220, 20, 60, 0.4);
+            transform: scale(1.15) translateY(-4px);
+            box-shadow: 0 15px 35px rgba(220, 20, 60, 0.3);
         }
         
         .social-placeholder:hover i {
-            color: var(--gold-2);
+            color: var(--red-2);
         }
         
         .social-placeholder i {
-            color: var(--gold);
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
+            color: var(--red);
+            font-size: 1.8rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .fade-in {
@@ -260,12 +267,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--violet-2) 0%, var(--gold) 60%, transparent 100%);
+            background: linear-gradient(90deg, var(--red-3) 0%, var(--red) 60%, transparent 100%);
             transition: width 0.3s ease;
         }
         
         .nav-link:hover {
-            color: var(--gold-2);
+            color: var(--red-2);
         }
         
         .nav-link:hover::after {
@@ -299,7 +306,7 @@
         }
         
         .contact-item i {
-            color: var(--gold);
+            color: var(--red);
             margin-right: 15px;
             font-size: 1.2rem;
         }
@@ -332,14 +339,14 @@
             position: absolute;
             top: 30px;
             right: 30px;
-            color: var(--gold-2);
+            color: var(--red-2);
             font-size: 2rem;
             cursor: pointer;
             transition: color 0.3s ease;
         }
         
         .modal-close:hover {
-            color: var(--violet-2);
+            color: var(--red-3);
         }
         
         @media (max-width: 768px) {
@@ -367,7 +374,7 @@
         .social-3d-row .social-placeholder {
             box-shadow:
                 0 18px 40px rgba(0, 0, 0, 0.55),
-                0 0 0 1px rgba(212, 175, 55, 0.15) inset;
+                0 0 0 1px rgba(220, 20, 60, 0.15) inset;
             transform: translateZ(0);
         }
 
@@ -375,7 +382,7 @@
             transform: translateY(-6px) rotateX(10deg);
             box-shadow:
                 0 26px 70px rgba(0, 0, 0, 0.65),
-                0 0 0 1px rgba(212, 175, 55, 0.22) inset;
+                0 0 0 1px rgba(220, 20, 60, 0.22) inset;
         }
 
         @media (max-width: 768px) {
@@ -393,14 +400,14 @@
         <div class="container flex items-center justify-between">
             <div class="flex items-center space-x-6">
                 <img src="icono/MorlaTatto.jpg" alt="Morla Tatto Logo" class="w-20 h-20 rounded-full border-2 border-yellow-600">
-                <h1 class="logo-title text-4xl md:text-6xl" style="color: #d4af37;">Morla Tatto</h1>
+                <h1 class="logo-title text-4xl md:text-6xl" style="color: #dc143c;">Morla Tatto</h1>
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#galeria" class="nav-link">Galería</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
-            <button class="md:hidden text-2xl" style="color: #d4af37;" onclick="toggleMenu()">
+            <button class="md:hidden text-2xl" style="color: #dc143c;" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -416,7 +423,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero-bg py-24 px-4">
         <div class="container text-center fade-in">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6" style="color: #d4af37; font-family: 'Playfair Display', serif;">Arte en tu Piel</h2>
+            <h2 class="text-4xl md:text-6xl font-bold mb-6" style="color: #dc143c; font-family: 'Playfair Display', serif;">Arte en tu Piel</h2>
             <p class="text-xl md:text-2xl mb-12" style="color: #b0b0b0;">Diseños únicos que cuentan tu historia</p>
             <div class="flex justify-center space-x-6">
                 <a href="#galeria" class="btn-primary">Ver Galería</a>
@@ -446,96 +453,451 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Tattoo 1 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475497168_1807998266641064_5969291779317501928_n.jpg" alt="Tatuaje 1" class="gallery-img">
+                    <img src="Morla tattos/04905ee6-073c-4cee-acbe-c2337f6a91b2.JPG" alt="Tatuaje 1" class="gallery-img">
                 </div>
                 <!-- Tattoo 2 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475670221_1803453090428915_766508315985944549_n.jpg" alt="Tatuaje 2" class="gallery-img">
+                    <img src="Morla tattos/04ab8d7e-a6f7-4ae8-9482-bb3d765a6ce5.JPG" alt="Tatuaje 2" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 3 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475837867_1803453100428914_1850601968987183355_n.jpg" alt="Tatuaje 3" class="gallery-img">
+                    <img src="Morla tattos/0604c5ff-48c4-466c-bde2-88d591bcec88.JPG" alt="Tatuaje 3" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 4 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475847172_1805187330255491_6696791531203954024_n.jpg" alt="Tatuaje 4" class="gallery-img">
+                    <img src="Morla tattos/07b9f1f0-d8df-4c9e-875b-a525df3aaeac.JPG" alt="Tatuaje 4" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 5 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475920125_1805174376923453_8687505687794945580_n.jpg" alt="Tatuaje 5" class="gallery-img">
+                    <img src="Morla tattos/0d9c18da-d647-4eca-b7e7-8a35e10b5431.JPG" alt="Tatuaje 5" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 6 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/475998440_1804502140324010_987989070631356609_n.jpg" alt="Tatuaje 6" class="gallery-img">
+                    <img src="Morla tattos/14951cb4-9c76-42f2-8f63-89ad48254b49.JPG" alt="Tatuaje 6" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 7 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/476031815_1807988206642070_2110784754772435301_n.jpg" alt="Tatuaje 7" class="gallery-img">
+                    <img src="Morla tattos/1749a989-8462-4f27-a66e-c77482582e9a.JPG" alt="Tatuaje 7" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 8 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/476227343_1807079370066287_8984817803875149283_n.jpg" alt="Tatuaje 8" class="gallery-img">
+                    <img src="Morla tattos/1830908e-f7ba-41e1-bd6f-841c59fcacc1.JPG" alt="Tatuaje 8" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 9 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/476641765_1807990713308486_5807019179537970180_n.jpg" alt="Tatuaje 9" class="gallery-img">
+                    <img src="Morla tattos/1c6d5e70-3579-4c9f-b73c-f8322f2b2ef7.JPG" alt="Tatuaje 9" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 10 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/480460065_1819613182146239_8257843426504997025_n.jpg" alt="Tatuaje 10" class="gallery-img">
+                    <img src="Morla tattos/23acd2dd-65f4-4b72-9af6-17795ecdb92a.JPG" alt="Tatuaje 10" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 11 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/480985129_1825710901536467_1366806533733866092_n.jpg" alt="Tatuaje 11" class="gallery-img">
+                    <img src="Morla tattos/273acb61-bbb0-45ee-8b13-e187e9e42891.JPG" alt="Tatuaje 11" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 12 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/481257873_1825711228203101_462210398685290520_n.jpg" alt="Tatuaje 12" class="gallery-img">
+                    <img src="Morla tattos/29f3131f-71f7-48b1-83b3-071a1420c35e.JPG" alt="Tatuaje 12" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 13 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/481268678_1821662771941280_3352646125731681239_n.jpg" alt="Tatuaje 13" class="gallery-img">
+                    <img src="Morla tattos/2bf89ca5-8824-41d1-a98f-6899b94ad461.JPG" alt="Tatuaje 13" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 14 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/481363052_1829506524490238_2215154275309277650_n.jpg" alt="Tatuaje 14" class="gallery-img">
+                    <img src="Morla tattos/2c628feb-1e77-4c09-b542-b4d345abdcbd.JPG" alt="Tatuaje 14" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 15 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/491378945_1862384361202454_7859196883988077915_n.jpg" alt="Tatuaje 15" class="gallery-img">
+                    <img src="Morla tattos/317573b0-ce3a-49aa-b215-748347a57d06.JPG" alt="Tatuaje 15" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 16 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/634119060_2106736153433939_2876039232792222447_n.jpg" alt="Tatuaje 16" class="gallery-img">
+                    <img src="Morla tattos/3362db6f-f045-4f08-9765-6f3ed32bb274.JPG" alt="Tatuaje 16" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 17 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/636166383_2106738693433685_8100303242761066457_n.jpg" alt="Tatuaje 17" class="gallery-img">
+                    <img src="Morla tattos/36b02c67-9932-4975-94e2-3b0d0744aef7.JPG" alt="Tatuaje 17" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 18 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/636788866_2106737860100435_594942321298680689_n.jpg" alt="Tatuaje 18" class="gallery-img">
+                    <img src="Morla tattos/3ac6053a-160a-4c09-90d5-42eee84c30f1.JPG" alt="Tatuaje 18" class="gallery-img">
                 </div>
                 
                 <!-- Tattoo 19 -->
                 <div class="tattoo-card">
-                    <img src="tatuajes/654744320_2132383584202529_2374428139151920299_n.jpg" alt="Tatuaje 19" class="gallery-img">
+                    <img src="Morla tattos/3ae73f89-285a-4008-acd8-8fe096777a64.JPG" alt="Tatuaje 19" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 20 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/3e7a5903-136e-4afe-a2f2-f1e94670cfaa.JPG" alt="Tatuaje 20" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 21 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/4021533b-7352-4d8d-9468-0c556eee3e7f.JPG" alt="Tatuaje 21" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 22 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/40521838-e266-4927-af51-f141791d2032.JPG" alt="Tatuaje 22" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 23 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/41d58e02-2e10-4860-b1a6-02c9fad1f51d.JPG" alt="Tatuaje 23" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 24 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/43ec3056-79b6-42bf-8ec7-322a8ec00684.JPG" alt="Tatuaje 24" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 25 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/44f0bfff-2612-4b00-a7ee-dd1878368b93.JPG" alt="Tatuaje 25" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 26 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/45aeb585-01b3-4d2c-aaf3-3e964ad6ee8f.JPG" alt="Tatuaje 26" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 27 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/4e17bde9-9805-48e0-a19e-36338e7238d8.JPG" alt="Tatuaje 27" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 28 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/4edcbd59-c798-4223-bdf4-fd2d1dca3c23.JPG" alt="Tatuaje 28" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 29 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/4f633849-e6b9-4505-9190-a98c4a608ce1.JPG" alt="Tatuaje 29" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 30 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/54f47916-2dc7-4fc1-a7f9-d3870513f386.JPG" alt="Tatuaje 30" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 31 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/56c613db-2ad2-480a-8428-91d17167b924.JPG" alt="Tatuaje 31" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 32 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/60344747-9d34-4cfd-a36d-acd86c871f94.JPG" alt="Tatuaje 32" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 33 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/62a9a184-2230-4f03-b793-5e6333c62dab.JPG" alt="Tatuaje 33" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 34 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/64ae1c0c-8603-450b-b484-b2f733299365.JPG" alt="Tatuaje 34" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 35 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/657edb6f-9634-420c-a7f5-125bce7ffbda.JPG" alt="Tatuaje 35" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 36 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/6a2f3080-5be1-4488-a250-630b54bd882d.JPG" alt="Tatuaje 36" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 37 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/6b09c6cc-5262-4947-8ac1-7bb9a9acc6e3.JPG" alt="Tatuaje 37" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 38 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/6e02e969-9388-4501-b95c-2d7ad132e093.JPG" alt="Tatuaje 38" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 39 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/71b24baf-5753-48fc-9b45-a19f4bc0dda2.JPG" alt="Tatuaje 39" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 40 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/71b4cf37-26cf-4ab4-be9a-3e589dfb3de5.JPG" alt="Tatuaje 40" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 41 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/74d16f5d-ebcd-4160-b3e8-1ad1e68c6a6f.JPG" alt="Tatuaje 41" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 42 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/75b11fe2-09a8-4219-8309-11ce46fdd812.JPG" alt="Tatuaje 42" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 43 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/7ccb1e35-6834-483f-b823-2e3037c62fb6.JPG" alt="Tatuaje 43" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 44 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/7e445258-d1e4-4b74-80a8-9902db80f3d3.JPG" alt="Tatuaje 44" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 45 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/82ab2e16-3f3b-42ac-a5dc-f2dc2c3da096.JPG" alt="Tatuaje 45" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 46 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/8c65652c-34f4-487a-a00a-d907348ecef8.JPG" alt="Tatuaje 46" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 47 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/8e97ed15-4895-4901-b8f3-eda679b2634b.JPG" alt="Tatuaje 47" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 48 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/8fbfa547-f146-400f-bb7c-18e5a4e938ef.JPG" alt="Tatuaje 48" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 49 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/927c8a50-978d-4dec-baf8-b8c68108ae48.JPG" alt="Tatuaje 49" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 50 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/92acf84e-586d-4ca9-b2da-0c118b04f82c.JPG" alt="Tatuaje 50" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 51 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/96ddcc93-c722-4979-a5a5-c7870c7aa0c2.JPG" alt="Tatuaje 51" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 52 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/9b7eae87-0670-4522-9578-fedbcceb3ed4.JPG" alt="Tatuaje 52" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 53 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/9dc994f9-15af-4c01-96e7-fcd6cc1901f1.JPG" alt="Tatuaje 53" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 54 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/9f620b52-1143-4ac9-8bef-bcb35549ee79.JPG" alt="Tatuaje 54" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 55 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a01c8d0d-7f13-4f35-a84f-f88fe36863fe.JPG" alt="Tatuaje 55" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 56 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a61e33aa-9ffa-4ec7-83f6-7fb29d26ce1e.JPG" alt="Tatuaje 56" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 57 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a644406f-35b6-4295-a055-63f0a6076745.JPG" alt="Tatuaje 57" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 58 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a65bd74e-ae6e-4e4d-9a0f-196399202610.JPG" alt="Tatuaje 58" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 59 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a77ffcdf-b8ae-45d4-aedc-8c555da9a7e2.JPG" alt="Tatuaje 59" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 60 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/a7a6af99-4b09-4edd-a02a-4e1908244045.JPG" alt="Tatuaje 60" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 61 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/ad179230-2f41-4a23-8661-b04177784e9d.JPG" alt="Tatuaje 61" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 62 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/b20c9c2a-1d7a-4cab-827d-9650c415c7e9.JPG" alt="Tatuaje 62" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 63 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/b4ec7a4e-69b5-4551-8222-14b5dfafbcbf.JPG" alt="Tatuaje 63" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 64 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/b86374e4-91ea-4805-979f-f323bbfc1197.JPG" alt="Tatuaje 64" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 65 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/ba498dcc-7524-4902-9a0f-bdb6b996e582.JPG" alt="Tatuaje 65" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 66 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c0efccd7-e3b8-4ff8-b1d9-7491e6ba3978.JPG" alt="Tatuaje 66" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 67 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c141fdd1-579b-4afa-9319-37d790ce0851.JPG" alt="Tatuaje 67" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 68 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c3fd006a-7e40-4fec-8c9e-c28da31a8b94.JPG" alt="Tatuaje 68" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 69 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c59cf77a-5f0c-4f0c-97a1-14a6ae3f8287.JPG" alt="Tatuaje 69" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 70 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c6cc6b2f-f5a5-42cb-901f-e3ef5ad8f745.JPG" alt="Tatuaje 70" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 71 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/c789809d-1206-4941-98a5-f21d386f2409.JPG" alt="Tatuaje 71" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 72 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/cc98fdab-e812-4643-9f10-c1cd6e9e4985.JPG" alt="Tatuaje 72" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 73 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/cda7837e-740d-4126-af59-fc945bd75fed.JPG" alt="Tatuaje 73" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 74 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/d36e6dec-e067-43f1-8657-982a02efdd11.JPG" alt="Tatuaje 74" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 75 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/d5c9e530-efc2-4755-b2b6-2e9bfd8edde2.JPG" alt="Tatuaje 75" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 76 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/d6273c64-fb8f-4231-ba39-b399fc259730.JPG" alt="Tatuaje 76" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 77 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e29658bd-46e6-4fd5-8831-f69456c5552a.JPG" alt="Tatuaje 77" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 78 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e47fbbca-0172-473d-b62e-99277290f61b.JPG" alt="Tatuaje 78" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 79 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e4814452-09ce-4c51-8e6c-2678d6a8235e.JPG" alt="Tatuaje 79" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 80 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e6a4d606-ad0d-4eef-a1f7-214428cba5f1.JPG" alt="Tatuaje 80" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 81 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e702ea1f-0bbb-4f17-9703-9528f368a961.JPG" alt="Tatuaje 81" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 82 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/e7ae201c-deeb-48c1-834d-9fac8a9ca928.JPG" alt="Tatuaje 82" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 83 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/efbdd358-d9c9-4bee-a85d-c4a67fd8cc7c.JPG" alt="Tatuaje 83" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 84 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/f1685c0a-21e2-4c3c-9f80-548f8c4eecf9.JPG" alt="Tatuaje 84" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 85 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/f1eaf719-d82f-4565-9d20-118ff6370085.JPG" alt="Tatuaje 85" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 86 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/f31160f5-554d-4d21-b367-7565d46102e8.JPG" alt="Tatuaje 86" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 87 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/f5248f13-1a58-462b-b547-5afb7d72f350.JPG" alt="Tatuaje 87" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 88 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/f9db863f-b703-4ad1-a200-e81380425457.JPG" alt="Tatuaje 88" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 89 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/fa41f4fe-f440-40f3-9c3d-eb8d1bf68f8c.JPG" alt="Tatuaje 89" class="gallery-img">
+                </div>
+                
+                <!-- Tattoo 90 -->
+                <div class="tattoo-card">
+                    <img src="Morla tattos/ffbafe47-c9b1-4567-bbd0-9afa95882728.JPG" alt="Tatuaje 90" class="gallery-img">
                 </div>
             </div>
         </div>
@@ -594,7 +956,7 @@
         <div class="container">
             <div class="flex items-center justify-center mb-6">
                 <img src="icono/MorlaTatto.jpg" alt="Morla Tatto Logo" class="w-16 h-16 rounded-full border-2 border-yellow-600 mr-4">
-                <h3 class="logo-title text-3xl" style="color: #d4af37;">Morla Tatto</h3>
+                <h3 class="logo-title text-3xl" style="color: #dc143c;">Morla Tatto</h3>
             </div>
         </div>
     </footer>
